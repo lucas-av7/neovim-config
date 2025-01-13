@@ -169,9 +169,6 @@ vim.opt.termguicolors = true
 vim.keymap.set('n', '<leader>bc', '<cmd>bd<CR>', { desc = '[C]lose [B]uffer' })
 vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = '[N]ew [B]uffer' })
 
--- Explorer
-vim.keymap.set('n', '<leader>e', '<cmd>:Ex<CR>', { desc = '[E]xplorer' })
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
@@ -880,8 +877,6 @@ require('lazy').setup({
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
 
-      -- Git commands
-      require('mini.git').setup()
       -- Git diff
       require('mini.diff').setup {
         view = {
