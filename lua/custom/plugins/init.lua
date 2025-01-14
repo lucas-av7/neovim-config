@@ -11,6 +11,26 @@ return {
     end,
   },
   {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'sindrets/diffview.nvim',
+      'nvim-telescope/telescope.nvim',
+    },
+    config = true,
+    opts = {
+      graph_style = 'kitty',
+    },
+    keys = {
+      {
+        '<leader>gs',
+        '<cmd>Neogit<CR>',
+        mode = 'n',
+        desc = '[G]it [S]tatus',
+      },
+    },
+  },
+  {
     'nvim-tree/nvim-tree.lua',
     opts = {},
     keys = {
@@ -27,25 +47,6 @@ return {
         desc = 'Show file in expore',
       },
     },
-  },
-  {
-    'tpope/vim-fugitive',
-    opts = {},
-    keys = {
-      {
-        '<leader>gs',
-        '<cmd>Git<CR>',
-        mode = 'n',
-        desc = '[G]it [S]tatus',
-      },
-      {
-        '<leader>gl',
-        '<cmd>Git log<CR>',
-        mode = 'n',
-        desc = '[G]it [L]og',
-      },
-    },
-    config = function() end,
   },
   {
     'akinsho/bufferline.nvim',
