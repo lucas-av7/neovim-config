@@ -18,15 +18,12 @@ return {
       'nvim-telescope/telescope.nvim',
     },
     config = true,
-    opts = {
-      graph_style = 'kitty',
-    },
     keys = {
       {
-        '<leader>gs',
+        '<leader>g',
         '<cmd>Neogit<CR>',
         mode = 'n',
-        desc = '[G]it [S]tatus',
+        desc = '[G]it Panel',
       },
     },
   },
