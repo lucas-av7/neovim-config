@@ -11,6 +11,16 @@ return {
     end,
   },
   {
+    'sindrets/diffview.nvim',
+    opts = {
+      view = {
+        merge_tool = {
+          layout = 'diff3_mixed',
+        },
+      },
+    },
+  },
+  {
     'NeogitOrg/neogit',
     dependencies = {
       'nvim-lua/plenary.nvim',
