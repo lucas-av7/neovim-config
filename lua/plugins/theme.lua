@@ -1,9 +1,10 @@
 return {
   {
-    'dracula/vim',
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
     init = function()
-      vim.cmd.colorscheme 'dracula'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
 }
