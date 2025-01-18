@@ -1,6 +1,6 @@
 -- Buffers
-vim.keymap.set('n', '<leader>bc', '<cmd>bd<CR>', { desc = '[C]lose [B]uffer' })
-vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = '[N]ew [B]uffer' })
+vim.keymap.set('n', '<leader>bq', '<cmd>bd<CR>', { desc = '[B]uffer [Q]uit' })
+vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = '[B]uffer [N]ew' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`

@@ -12,10 +12,10 @@ return {
     },
     keys = {
       {
-        '<leader>g',
+        '<leader>gp',
         '<cmd>Neogit<CR>',
         mode = 'n',
-        desc = '[G]it Panel',
+        desc = '[G]it [P]anel',
       },
     },
   },

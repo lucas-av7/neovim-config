@@ -68,7 +68,6 @@ return {
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
-      vim.keymap.set('n', '<leader>sc', builtin.git_status, { desc = '[S]earch [C]hanged Files' })
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
@@ -79,6 +78,14 @@ return {
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
+
+      -- Git
+      vim.keymap.set('n', '<leader>bgc', builtin.git_bcommits, { desc = '[B]uffer [G]it [C]ommits' })
+      -- vim.keymap.set('n', '<leader>bgr', builtin.git_bcommits_range, { desc = '[B]uffer [G]it Commits [R]ange' }) -- 0.2.x
+      vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = '[G]it [B]ranches' })
+      vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = '[G]it [C]ommits' })
+      vim.keymap.set('n', '<leader>gf', builtin.git_status, { desc = '[G]it Changed [F]iles' })
+      vim.keymap.set('n', '<leader>gz', builtin.git_stash, { desc = '[G]it [Z]tash' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
