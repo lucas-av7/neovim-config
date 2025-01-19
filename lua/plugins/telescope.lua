@@ -87,7 +87,7 @@ return {
       vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = '[G]it [B]ranches' })
       vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = '[G]it [C]ommits' })
       vim.keymap.set('n', '<leader>gf', builtin.git_status, { desc = '[G]it Changed [F]iles' })
-      vim.keymap.set('n', '<leader>gs', builtin.git_stash, { desc = '[G]it [S]tash' })
+      vim.keymap.set('n', '<leader>gs', builtin.git_stash, { desc = '[G]it [S]tashes' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>s.', function()
