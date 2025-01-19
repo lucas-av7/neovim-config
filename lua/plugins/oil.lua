@@ -3,7 +3,7 @@ return {
   opts = {},
   dependencies = { 'echasnovski/mini.icons' },
   keys = {
-    { '<leader>o', '<cmd>Oil<CR>', mode = 'n', desc = '[O]il', silent = true },
+    { '<leader>f', '<cmd>Oil<CR>', mode = 'n', desc = '[F]iles', silent = true },
   },
   lazy = false,
 }

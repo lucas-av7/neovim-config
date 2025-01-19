@@ -33,10 +33,10 @@ return {
     },
     keys = {
       {
-        '<leader>gp',
+        '<leader>gs',
         '<cmd>Neogit<CR>',
         mode = 'n',
-        desc = '[G]it [P]anel',
+        desc = '[G]it [S]status',
       },
     },
   },

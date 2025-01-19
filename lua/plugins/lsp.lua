@@ -77,10 +77,10 @@ return {
           -- Jump to the definition of the word under your cursor.
           --  This is where a variable was first declared, or where a function is defined, etc.
           --  To jump back, press <C-t>.
-          map('<leader>ld', require('telescope.builtin').lsp_definitions, 'Symbol [D]efinition')
+          map('gd', require('telescope.builtin').lsp_definitions, '[G]oto [D]efinition')
 
           -- Find references for the word under your cursor.
-          map('<leader>lr', require('telescope.builtin').lsp_references, 'Symbol [R]eferences')
+          map('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
 
           -- Jump to the implementation of the word under your cursor.
           --  Useful when your language has ways of declaring types without an actual implementation.
@@ -247,12 +247,12 @@ return {
     cmd = { 'ConformInfo' },
     keys = {
       {
-        '<leader>bf',
+        '<leader>cf',
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
         mode = '',
-        desc = '[B]uffer [F]ormat',
+        desc = '[C]ode [F]ormat',
       },
     },
     opts = {
