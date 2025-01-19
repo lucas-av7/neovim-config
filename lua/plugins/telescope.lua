@@ -76,18 +76,10 @@ return {
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>.', builtin.oldfiles, { desc = 'List [.] Old Files' })
-
-      -- Buffer
       vim.keymap.set('n', '<leader>/', builtin.buffers, { desc = 'List [/] Open Files' })
       vim.keymap.set('n', '<leader>bc', builtin.git_bcommits, { desc = '[B]uffer Git [C]ommits' })
-      -- vim.keymap.set('n', '<leader>br', builtin.git_bcommits_range, { desc = '[B]uffer Git Commits [R]ange' }) -- 0.2.x
-
-      -- Git
       vim.keymap.set('n', '<leader>gb', builtin.git_branches, { desc = '[G]it [B]ranches' })
-      vim.keymap.set('n', '<leader>gc', builtin.git_commits, { desc = '[G]it [C]ommits' })
       vim.keymap.set('n', '<leader>gf', builtin.git_status, { desc = '[G]it [F]iles' })
-      vim.keymap.set('n', '<leader>gz', builtin.git_stash, { desc = '[G]it [Z] Stashes' })
-
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>s.', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.

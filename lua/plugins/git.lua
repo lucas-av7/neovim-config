@@ -1,5 +1,4 @@
 return {
-  { 'echasnovski/mini-git', version = false, main = 'mini.git', opts = {} },
   {
     'echasnovski/mini.diff',
     event = 'VimEnter',
@@ -8,6 +7,11 @@ return {
       view = {
         style = 'sign',
         signs = { add = '+', change = '~', delete = '-' },
+      },
+      mappings = {
+        apply = '<leader>ha', -- Stage hunk
+        reset = '<leader>hr',
+        textobject = '',
       },
     },
     keys = {
