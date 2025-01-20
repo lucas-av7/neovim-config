@@ -37,10 +37,10 @@ return {
     },
     keys = {
       {
-        '<leader>gs',
+        '<leader>gg',
         '<cmd>Neogit<CR>',
         mode = 'n',
-        desc = '[G]it [S]status',
+        desc = '[G]it Neo[G]it',
       },
     },
   },
