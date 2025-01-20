@@ -7,7 +7,9 @@ return {
       {
         '<leader>f',
         function()
-          require('mini.files').open(vim.api.nvim_buf_get_name(0))
+          local mf = require 'mini.files'
+          mf.open(vim.api.nvim_buf_get_name(0))
+          mf.reveal_cwd()
         end,
         mode = 'n',
         silent = true,
