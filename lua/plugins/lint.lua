@@ -4,11 +4,11 @@ return {
   config = function()
     local lint = require 'lint'
     lint.linters_by_ft = {
-      python = { 'mypy' },
-      javascriptreact = { 'eslint_d' },
-      typescriptreact = { 'eslint_d' },
-      javascript = { 'eslint_d' },
-      typescript = { 'eslint_d' },
+      python = { 'mypy', 'cspell' },
+      javascriptreact = { 'eslint_d', 'cspell' },
+      typescriptreact = { 'eslint_d', 'cspell' },
+      javascript = { 'eslint_d', 'cspell' },
+      typescript = { 'eslint_d', 'cspell' },
     }
     -- Create autocommand which carries out the actual linting on the specified events.
     local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })
@@ -20,7 +20,6 @@ return {
         -- describe the hovered symbol using Markdown.
         if vim.opt_local.modifiable:get() then
           lint.try_lint()
-          lint.try_lint 'cspell'
         end
       end,
     })
