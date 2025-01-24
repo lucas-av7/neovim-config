@@ -1,19 +1,21 @@
 return {
   {
-    'echasnovski/mini.files',
-    version = false,
-    opts = {},
+    'stevearc/oil.nvim',
+    event = 'VimEnter',
+    enabled = true,
+    opts = {
+      float = {
+        max_width = 0.65,
+        max_height = 0.65,
+      },
+    },
+    dependencies = { { 'echasnovski/mini.icons', opts = {} } },
     keys = {
       {
         '<leader>f',
-        function()
-          local mf = require 'mini.files'
-          mf.open(vim.api.nvim_buf_get_name(0))
-          mf.reveal_cwd()
-        end,
+        '<cmd>Oil<CR>',
         mode = 'n',
-        silent = true,
-        desc = '[F]iles',
+        desc = '[F]ile Explore',
       },
     },
   },

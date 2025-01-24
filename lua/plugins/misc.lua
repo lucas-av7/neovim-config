@@ -21,12 +21,18 @@ return {
   { 'echasnovski/mini.surround', opts = {} },
   {
     'nvim-lualine/lualine.nvim', -- Status line
+    event = 'VimEnter',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
+      tabline = {
+        lualine_a = { 'filename' },
+        lualine_b = { 'diagnostics' },
+        lualine_y = { { 'datetime', style = '%H:%M' } },
+        lualine_z = { { 'tabs', show_modified_status = false } },
+      },
       sections = {
-        lualine_c = {
-          { 'filename', path = 1 },
-        },
+        lualine_b = { 'branch', 'diff' },
+        lualine_c = {},
       },
     },
   },
