@@ -21,6 +21,7 @@ return {
       { 'nvim-telescope/telescope-ui-select.nvim' },
       { 'nvim-telescope/telescope-project.nvim' },
       { 'nvim-telescope/telescope-file-browser.nvim' },
+      { 'nvim-telescope/telescope-frecency.nvim' },
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
@@ -87,12 +88,14 @@ return {
       pcall(require('telescope').load_extension, 'ui-select')
       pcall(require('telescope').load_extension, 'project')
       pcall(require('telescope').load_extension, 'file_browser')
+      pcall(require('telescope').load_extension, 'frecency')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>,', builtin.find_files, { desc = 'List [,] All Files' })
+      -- vim.keymap.set('n', '<leader>,', builtin.find_files, { desc = 'List [,] All Files' })
+      vim.keymap.set('n', '<leader>,', '<cmd>Telescope frecency workspace=CWD<CR>', { desc = 'List [,] All Files' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>s,', builtin.live_grep, { desc = '[S]earch [,] in All Files' })
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
