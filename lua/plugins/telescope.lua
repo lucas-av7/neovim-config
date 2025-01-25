@@ -1,7 +1,7 @@
 return {
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
-    event = 'VimEnter',
+    lazy = false,
     branch = '0.1.x',
     dependencies = {
       'nvim-lua/plenary.nvim',
@@ -19,7 +19,8 @@ return {
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-
+      { 'nvim-telescope/telescope-project.nvim' },
+      { 'nvim-telescope/telescope-file-browser.nvim' },
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
@@ -55,14 +56,22 @@ return {
         --   },
         -- },
         defaults = {
+          sorting_strategy = 'ascending',
           layout_strategy = 'vertical',
           layout_config = {
             vertical = { width = 0.80, height = 0.80 },
+            horizontal = { width = 0.80, height = 0.80 },
           },
         },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
+          },
+          file_browser = {
+            display_stat = false,
+            hijack_netrw = true,
+            grouped = true,
+            layout_strategy = 'horizontal',
           },
         },
         pickers = {
@@ -76,6 +85,8 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
+      pcall(require('telescope').load_extension, 'project')
+      pcall(require('telescope').load_extension, 'file_browser')
 
       -- See `:help telescope.builtin`
       local builtin = require 'telescope.builtin'
@@ -113,6 +124,11 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- Project extension
+      vim.keymap.set('n', '<leader>sp', '<cmd>Telescope project<CR>', { desc = '[S]earch [P]rojects' })
+      -- File Browser extension
+      vim.keymap.set('n', '<leader>f', '<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[F]ile Browser' })
     end,
   },
 }

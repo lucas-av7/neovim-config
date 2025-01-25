@@ -24,7 +24,6 @@ return {
     event = 'VimEnter',
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     opts = {
-      extensions = { 'oil' },
       tabline = {
         lualine_a = {
           function()
@@ -44,10 +43,7 @@ return {
         lualine_c = {
           'diff',
           'diagnostics',
-          function()
-            local statusline = require 'arrow.statusline'
-            return statusline.text_for_statusline_with_icons()
-          end,
+          'grapple',
         },
       },
     },
