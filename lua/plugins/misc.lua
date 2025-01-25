@@ -41,7 +41,14 @@ return {
       sections = {
         lualine_a = { 'mode' },
         lualine_b = { 'filename' },
-        lualine_c = { 'diff', 'diagnostics' },
+        lualine_c = {
+          'diff',
+          'diagnostics',
+          function()
+            local statusline = require 'arrow.statusline'
+            return statusline.text_for_statusline_with_icons()
+          end,
+        },
       },
     },
   },
