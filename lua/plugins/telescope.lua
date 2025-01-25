@@ -65,6 +65,12 @@ return {
             require('telescope.themes').get_dropdown(),
           },
         },
+        pickers = {
+          buffers = {
+            ignore_current_buffer = true,
+            sort_mru = true,
+          },
+        },
       }
 
       -- Enable Telescope extensions if they are installed

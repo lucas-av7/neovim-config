@@ -2,7 +2,6 @@ return {
   {
     'stevearc/oil.nvim',
     event = 'VimEnter',
-    enabled = true,
     opts = {
       float = {
         max_width = 0.65,
