@@ -21,7 +21,7 @@ return {
       { 'nvim-telescope/telescope-ui-select.nvim' },
       { 'nvim-telescope/telescope-project.nvim' },
       { 'nvim-telescope/telescope-file-browser.nvim' },
-      { 'nvim-telescope/telescope-frecency.nvim' },
+      { 'nvim-telescope/telescope-frecency.nvim', opts = { db_safe_mode = false } },
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
