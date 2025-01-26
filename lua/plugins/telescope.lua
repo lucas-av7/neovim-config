@@ -80,6 +80,9 @@ return {
             ignore_current_buffer = true,
             sort_mru = true,
           },
+          oldfiles = {
+            only_cwd = true,
+          },
         },
       }
 
