@@ -1,7 +1,7 @@
 -- Buffers
 vim.keymap.set('n', '<leader>bq', '<cmd>bd<CR>', { desc = '[B]uffer [Q]uit' })
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>', { desc = '[B]uffer [N]ext' })
-vim.keymap.set('n', '<leader>bn', '<cmd>bp<CR>', { desc = '[B]uffer [P]revious' })
+vim.keymap.set('n', '<leader>bp', '<cmd>bp<CR>', { desc = '[B]uffer [P]revious' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
