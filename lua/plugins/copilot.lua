@@ -2,6 +2,7 @@ return {
   {
     'github/copilot.vim',
     event = 'InsertEnter',
+    tag = 'v1.38.0', -- For Node.js 16 compatibility
   },
   {
     'CopilotC-Nvim/CopilotChat.nvim',
