@@ -15,8 +15,8 @@ return {
   keys = {
     { '<leader>tt', '<cmd>Grapple toggle<cr>', desc = '[T]oggle [T]ag' },
     { '\\', '<cmd>Telescope grapple tags layout_strategy=vertical<cr>', desc = 'Open tags window' },
-    { '<Tab>', '<cmd>Grapple cycle_tags next<cr>', desc = 'Cycle next tag' },
-    { '<S-Tab>', '<cmd>Grapple cycle_tags prev<cr>', desc = 'Cycle previous tag' },
+    { '|', '<cmd>Grapple cycle_tags next<cr>', desc = 'Cycle next tag' },
+    { '<C-\\>', '<cmd>Grapple cycle_tags prev<cr>', desc = 'Cycle previous tag' },
   },
   config = function()
     require('telescope').load_extension 'grapple'
