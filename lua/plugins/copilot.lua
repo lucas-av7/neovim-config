@@ -1,6 +1,7 @@
 return {
   {
     'github/copilot.vim',
+    cmd = 'Copilot',
     event = 'InsertEnter',
     tag = 'v1.38.0', -- For Node.js 16 compatibility
   },
