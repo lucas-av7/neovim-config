@@ -24,6 +24,7 @@ return {
         'diagnostics',
         'grapple',
       },
+      lualine_x = { 'filetype' },
     },
   },
 }
