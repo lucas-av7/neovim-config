@@ -19,7 +19,6 @@ return {
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-      { 'nvim-telescope/telescope-project.nvim' },
       { 'nvim-telescope/telescope-file-browser.nvim' },
       { 'nvim-telescope/telescope-frecency.nvim', opts = { db_safe_mode = false } },
       -- Useful for getting pretty icons, but requires a Nerd Font.
@@ -89,7 +88,6 @@ return {
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
       pcall(require('telescope').load_extension, 'ui-select')
-      pcall(require('telescope').load_extension, 'project')
       pcall(require('telescope').load_extension, 'file_browser')
       pcall(require('telescope').load_extension, 'frecency')
 
@@ -131,9 +129,6 @@ return {
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
 
-      -- Project extension
-      vim.keymap.set('n', '<leader>sp', '<cmd>Telescope project<CR>', { desc = '[S]earch [P]rojects' })
-      -- File Browser extension
       vim.keymap.set('n', '<leader>f', '<cmd>Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[F]ile Browser' })
     end,
   },
