@@ -14,7 +14,7 @@ return {
       lualine_a = {
         function()
           local root = require('snacks').git.get_root() or vim.fn.getcwd()
-          return root:match '.*/(.*)' or ''
+          return root:match '.*/(.*)' or root
         end,
       },
       lualine_b = {
