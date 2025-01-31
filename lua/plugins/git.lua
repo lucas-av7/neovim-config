@@ -8,11 +8,7 @@ return {
         style = 'sign',
         signs = { add = '+', change = '~', delete = '-' },
       },
-      mappings = {
-        apply = '<leader>ha', -- Stage hunk
-        reset = '<leader>hr',
-        textobject = '',
-      },
+      mappings = {},
     },
     keys = {
       {
@@ -37,10 +33,10 @@ return {
     },
     keys = {
       {
-        '<leader>gg',
+        '<leader>g',
         '<cmd>Neogit<CR>',
         mode = 'n',
-        desc = '[G]it Neo[G]it',
+        desc = '[G]it',
       },
     },
   },
@@ -51,22 +47,6 @@ return {
         merge_tool = {
           layout = 'diff3_mixed',
         },
-      },
-    },
-    keys = {
-      {
-        '<leader>gd',
-        '<cmd>DiffviewOpen<CR>',
-        mode = 'n',
-        desc = '[G]it [D]iff',
-        silent = true,
-      },
-      {
-        '<leader>bh',
-        '<cmd>DiffviewFileHistory %<CR>',
-        mode = 'n',
-        desc = '[B]uffer Git [H]istory',
-        silent = true,
       },
     },
   },

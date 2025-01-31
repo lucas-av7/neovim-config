@@ -16,10 +16,10 @@ return {
     opts = {},
     keys = {
       {
-        '<leader>cc',
+        '<leader>c',
         '<cmd>CopilotChat<cr>',
         mode = { 'n', 'v' },
-        desc = '[C]ode [C]hat',
+        desc = '[C]opilot Chat',
       },
     },
   },

@@ -18,14 +18,10 @@ return {
         lsp_doc_border = false, -- add a border to hover docs and signature help
       },
     },
-    keys = {
-      { '<leader>sl', '<cmd>Noice telescope<CR>', mode = 'n', silent = true, desc = '[S]earch [L]ogs' },
-    },
     dependencies = {
       'MunifTanjim/nui.nvim',
       'rcarriga/nvim-notify',
       'hrsh7th/nvim-cmp',
-      'nvim-telescope/telescope.nvim',
     },
   },
 }
