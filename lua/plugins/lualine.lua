@@ -17,12 +17,12 @@ return {
           return root:match '.*/(.*)' or ''
         end,
       },
-      lualine_b = { 'branch' },
-      lualine_c = {
+      lualine_b = {
         'filename',
         'diff',
         'diagnostics',
       },
+      lualine_c = { 'branch' },
       lualine_x = { 'filetype' },
     },
   },
