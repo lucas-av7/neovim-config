@@ -1,7 +1,3 @@
--- Buffers
-vim.keymap.set('n', '<leader>bq', '<cmd>bd<CR>', { desc = '[B]uffer [Q]uit' })
-vim.keymap.set('n', '<leader>bd', vim.diagnostic.setloclist, { desc = ' [B]uffer [D]iagnostic' })
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')

@@ -15,6 +15,7 @@ return {
     },
   },
   keys = {
+    -- Explorer
     {
       '<leader>e',
       function()
@@ -23,6 +24,7 @@ return {
       mode = 'n',
       desc = '[E]xplorer',
     },
+    -- Picker
     {
       '<leader>f',
       function()
@@ -44,6 +46,23 @@ return {
       end,
       mode = 'n',
       desc = '[B]uffer Git [L]og',
+    },
+    -- Bufdelete
+    {
+      '<leader>bq',
+      function()
+        require('snacks').bufdelete()
+      end,
+      mode = 'n',
+      desc = '[B]uffer [D]elete',
+    },
+    {
+      '<leader>wd',
+      function()
+        require('snacks').bufdelete.all()
+      end,
+      mode = 'n',
+      desc = '[W]orkspace [D]elete buffers',
     },
   },
 }
