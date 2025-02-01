@@ -25,6 +25,13 @@ return {
         enabled = false,
       },
     },
+    terminal = {
+      win = {
+        wo = {
+          winbar = '',
+        },
+      },
+    },
   },
   keys = {
     -- Explorer
@@ -89,6 +96,15 @@ return {
       end,
       mode = 'n',
       desc = '[T]oggle [I]ndent Guides',
+    },
+    -- Terminal
+    {
+      '<leader><leader>',
+      function()
+        require('snacks').terminal.open()
+      end,
+      mode = 'n',
+      desc = 'Terminal',
     },
   },
 }
