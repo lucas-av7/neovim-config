@@ -26,7 +26,7 @@ return {
     dependencies = {
       'nvim-lua/plenary.nvim',
       'sindrets/diffview.nvim',
-      'nvim-telescope/telescope.nvim',
+      'folke/snacks.nvim', -- for picker
     },
     opts = {
       graph_style = 'kitty',
