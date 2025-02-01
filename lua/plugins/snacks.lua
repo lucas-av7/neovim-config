@@ -13,6 +13,18 @@ return {
         },
       },
     },
+    indent = {
+      indent = {
+        only_scope = true,
+        only_current = true,
+      },
+      animate = {
+        enabled = false,
+      },
+      scope = {
+        enabled = false,
+      },
+    },
   },
   keys = {
     -- Explorer
@@ -63,6 +75,20 @@ return {
       end,
       mode = 'n',
       desc = '[W]orkspace [D]elete buffers',
+    },
+    -- Indent
+    {
+      '<leader>ti',
+      function()
+        local snacks = require 'snacks'
+        if snacks.indent.enabled then
+          snacks.indent.disable()
+        else
+          snacks.indent.enable()
+        end
+      end,
+      mode = 'n',
+      desc = '[T]oggle [I]ndent Guides',
     },
   },
 }
