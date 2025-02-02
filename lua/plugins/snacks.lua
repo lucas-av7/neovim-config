@@ -77,6 +77,14 @@ return {
       mode = 'n',
       desc = '[S]earch',
     },
+    {
+      '<leader>bl',
+      function()
+        require('snacks').picker.git_log_file()
+      end,
+      mode = 'n',
+      desc = '[B]uffer Git [L]og',
+    },
     -- Bufdelete
     {
       '<leader>bd',
