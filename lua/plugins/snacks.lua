@@ -68,7 +68,7 @@ return {
     },
     -- Bufdelete
     {
-      '<leader>bq',
+      '<leader>bd',
       function()
         require('snacks').bufdelete()
       end,
