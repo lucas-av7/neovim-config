@@ -46,7 +46,6 @@ return {
       -- Document existing key chains
       spec = {
         { '<leader>b', group = '[B]uffer', icon = '' },
-        { '<leader>c', group = '[C]opilot Chat', icon = '' },
         { '<leader>e', group = '[E]xplore', icon = '󰙅' },
         { '<leader>f', group = '[F]inder', icon = '' },
         { '<leader>g', group = '[G]it', icon = '' },
