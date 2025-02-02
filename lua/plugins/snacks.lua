@@ -15,6 +15,10 @@ return {
           matcher = {
             sort_empty = false,
           },
+          title = 'Finder (Smart)',
+        },
+        grep = {
+          title = 'Search (Grep)',
         },
       },
     },
@@ -58,18 +62,20 @@ return {
       desc = '[F]inder',
     },
     {
+      '<leader>p',
+      function()
+        require('snacks').picker.pickers()
+      end,
+      mode = 'n',
+      desc = '[P]ickers',
+    },
+    {
       '<leader>s',
       function()
         require('snacks').picker.grep()
       end,
-    },
-    {
-      '<leader>bl',
-      function()
-        require('snacks').picker.git_log_file()
-      end,
       mode = 'n',
-      desc = '[B]uffer Git [L]og',
+      desc = '[S]earch',
     },
     -- Bufdelete
     {

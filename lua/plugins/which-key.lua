@@ -46,10 +46,11 @@ return {
       -- Document existing key chains
       spec = {
         { '<leader>b', group = '[B]uffer', icon = '' },
-        { '<leader>e', group = '[E]xplore', icon = '󰙅' },
-        { '<leader>f', group = '[F]inder', icon = '' },
+        { '<leader>e', group = '[E]xplorer', icon = '󰙅' },
+        { '<leader>f', group = '[F]inder', icon = '󰀶' },
         { '<leader>g', group = '[G]it', icon = '' },
         { '<leader>l', group = '[L]sp', icon = '' },
+        { '<leader>p', group = '[P]ickers', icon = '󱐀' },
         { '<leader>s', group = '[S]earch', icon = '' },
         { '<leader>t', group = '[T]oggle', icon = '' },
         { '<leader>w', group = '[W]orkspace', icon = '󰧨' },
