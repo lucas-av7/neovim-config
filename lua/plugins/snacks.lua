@@ -104,7 +104,7 @@ return {
     },
     -- Terminal
     {
-      '<leader><leader>',
+      '<leader><CR>',
       function()
         require('snacks').terminal.open()
       end,

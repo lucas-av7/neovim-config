@@ -54,7 +54,7 @@ return {
         { '<leader>s', group = '[S]earch', icon = '' },
         { '<leader>t', group = '[T]oggle', icon = '' },
         { '<leader>w', group = '[W]orkspace', icon = '󰧨' },
-        { '<leader><leader>', group = 'Terminal', icon = '' },
+        { '<leader><CR>', group = 'Terminal', icon = '' },
       },
     },
   },
