@@ -16,6 +16,7 @@ return {
   },
   opts = {
     graph_style = 'kitty',
+    auto_show_console = false,
   },
   keys = {
     {
