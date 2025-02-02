@@ -11,6 +11,11 @@ return {
           jump = { close = true },
           layout = { preset = 'default', preview = true },
         },
+        smart = {
+          matcher = {
+            sort_empty = false,
+          },
+        },
       },
     },
     indent = {
