@@ -85,6 +85,38 @@ return {
       mode = 'n',
       desc = '[B]uffer Git [L]og',
     },
+    {
+      '<leader>gl',
+      function()
+        require('snacks').picker.git_log()
+      end,
+      mode = 'n',
+      desc = '[G]it [L]og',
+    },
+    {
+      '<leader>gS',
+      function()
+        require('snacks').picker.git_stash()
+      end,
+      mode = 'n',
+      desc = '[G]it [S]tash',
+    },
+    {
+      '<leader>gb',
+      function()
+        require('snacks').picker.git_branches()
+      end,
+      mode = 'n',
+      desc = '[G]it [B]ranch',
+    },
+    {
+      '<leader>gs',
+      function()
+        require('snacks').picker.git_status()
+      end,
+      mode = 'n',
+      desc = '[G]it [S]tatus',
+    },
     -- Bufdelete
     {
       '<leader>bd',
