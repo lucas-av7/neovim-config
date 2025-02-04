@@ -16,6 +16,7 @@ return {
   },
   opts = {
     graph_style = 'kitty',
+    process_spinner = true,
     auto_show_console = false,
   },
   keys = {
