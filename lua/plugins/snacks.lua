@@ -120,7 +120,7 @@ return {
     {
       '<leader><CR>',
       function()
-        require('snacks').terminal.open()
+        require('snacks').terminal.toggle()
       end,
       mode = 'n',
       desc = 'Terminal',
