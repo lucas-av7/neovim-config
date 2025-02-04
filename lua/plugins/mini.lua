@@ -9,12 +9,11 @@ return {
         signs = { add = '+', change = '~', delete = '-' },
       },
       mappings = {
-        apply = '<leader>gha', -- stage hunk
-        reset = '<leader>ghr', -- undo hunk
-        textobject = '<leader>gha', -- Hunk range textobject to be used inside operator
+        apply = '',
+        reset = '',
+        textobject = '',
       },
     }
-    require('mini.git').setup {}
     require('mini.ai').setup { n_lines = 500 }
     require('mini.surround').setup {}
   end,
