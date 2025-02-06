@@ -1,5 +1,6 @@
 return {
   'FabijanZulj/blame.nvim',
+  cmd = 'BlameToggle',
   keys = {
     {
       '<leader>tb',
@@ -9,4 +10,5 @@ return {
       silent = true,
     },
   },
+  opts = {},
 }
