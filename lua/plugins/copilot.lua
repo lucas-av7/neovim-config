@@ -1,12 +1,14 @@
 return {
   {
     'github/copilot.vim',
+    enabled = false,
     cmd = 'Copilot',
     event = 'InsertEnter',
     tag = 'v1.38.0', -- For Node.js 16 compatibility
   },
   {
     'CopilotC-Nvim/CopilotChat.nvim',
+    enabled = false,
     cmd = 'CopilotChat',
     dependencies = {
       { 'github/copilot.vim' },
