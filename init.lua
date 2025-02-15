@@ -1,4 +1,10 @@
 require 'options'
 require 'keymaps'
 require 'autocmd'
-require 'config.lazy'
+
+if vim.g.vscode then
+  -- VSCode extension
+else
+  -- ordinary Neovim
+  require 'config.lazy'
+end
