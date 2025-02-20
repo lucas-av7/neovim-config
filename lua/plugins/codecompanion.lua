@@ -5,7 +5,7 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-treesitter/nvim-treesitter',
-    'echasnovski/mini.diff',
+    'echasnovski/mini.nvim',
   },
   opts = {
     strategies = {
