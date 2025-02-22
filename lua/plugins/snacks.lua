@@ -36,6 +36,7 @@ return {
     },
     terminal = {
       win = {
+        position = 'right',
         wo = {
           winbar = '',
         },
