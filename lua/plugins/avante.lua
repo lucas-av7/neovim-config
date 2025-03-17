@@ -1,11 +1,14 @@
 return {
   'yetone/avante.nvim',
-  enabled = false,
   event = 'VeryLazy',
   lazy = false,
   opts = {
     provider = 'claude',
-    auto_suggestions_provider = 'claude',
+    openai = {
+      model = 'o3-mini',
+      reasoning_effort = 'high',
+    },
+    auto_suggestions_provider = nil,
     behaviour = {
       auto_apply_diff_after_generation = true,
     },
