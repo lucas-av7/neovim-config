@@ -1,12 +1,25 @@
 return {
   'yetone/avante.nvim',
   event = 'VeryLazy',
+  enabled = true,
   lazy = false,
   opts = {
-    provider = 'claude',
+    provider = 'gemini',
     openai = {
       model = 'o3-mini',
       reasoning_effort = 'high',
+    },
+    gemini = {
+      model = 'gemini-2.0-flash-001',
+      api_key_name = 'GOOGLE_AI_API_KEY',
+    },
+    vendors = {
+      openrouter = {
+        __inherited_from = 'openai',
+        endpoint = 'https://openrouter.ai/api/v1',
+        api_key_name = 'OPENROUTER_API_KEY',
+        model = 'google/gemini-2.0-flash-001',
+      },
     },
     auto_suggestions_provider = nil,
     behaviour = {
