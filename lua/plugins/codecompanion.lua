@@ -11,10 +11,10 @@ return {
   opts = {
     strategies = {
       chat = {
-        adapter = 'anthropic',
+        adapter = 'gemini',
       },
       inline = {
-        adapter = 'anthropic',
+        adapter = 'gemini',
       },
     },
     display = {
@@ -26,6 +26,15 @@ return {
           width = 0.35,
         },
       },
+    },
+    adapters = {
+      gemini = function()
+        return require('codecompanion.adapters').extend('gemini', {
+          env = {
+            api_key = 'cmd:echo $GOOGLE_AI_API_KEY',
+          },
+        })
+      end,
     },
   },
   keys = {
