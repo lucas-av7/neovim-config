@@ -10,7 +10,7 @@ return {
       reasoning_effort = 'high',
     },
     gemini = {
-      model = 'gemini-2.0-flash-001',
+      model = 'gemini-2.5-pro-preview-03-25',
       api_key_name = 'GOOGLE_AI_API_KEY',
     },
     vendors = {
