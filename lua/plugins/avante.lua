@@ -5,20 +5,22 @@ return {
   lazy = false,
   opts = {
     provider = 'gemini',
-    openai = {
-      model = 'o3-mini',
-      reasoning_effort = 'high',
-    },
-    gemini = {
-      model = 'gemini-2.5-pro-preview-03-25',
-      api_key_name = 'GOOGLE_AI_API_KEY',
-    },
-    vendors = {
+    providers = {
+      gemini = {
+        model = 'gemini-2.5-pro-preview-03-25',
+        api_key_name = 'GOOGLE_AI_API_KEY',
+      },
       openrouter = {
         __inherited_from = 'openai',
         endpoint = 'https://openrouter.ai/api/v1',
         api_key_name = 'OPENROUTER_API_KEY',
         model = 'google/gemini-2.0-flash-001',
+      },
+      openai = {
+        model = 'o3-mini',
+        extra_request_body = {
+          reasoning_effort = 'high',
+        },
       },
     },
     auto_suggestions_provider = nil,
