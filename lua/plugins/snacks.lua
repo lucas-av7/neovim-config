@@ -12,6 +12,7 @@ return {
           layout = { preset = 'default', preview = true },
         },
         smart = {
+          filter = { cwd = true },
           matcher = {
             sort_empty = false,
           },
