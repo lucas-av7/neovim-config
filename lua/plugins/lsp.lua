@@ -208,6 +208,7 @@ return {
         'mypy',
         'prettierd',
         'eslint_d',
+        'eslint-lsp',
         'cspell',
         'stylua', -- Used to format Lua code
       })
