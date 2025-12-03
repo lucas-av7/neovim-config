@@ -1,7 +1,7 @@
 return {
   'olimorris/codecompanion.nvim',
-  enabled = false,
-  lazy = false,
+  version = 'v17.33.0',
+  enabled = true,
   config = true,
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -11,30 +11,18 @@ return {
   opts = {
     strategies = {
       chat = {
-        adapter = 'gemini',
+        adapter = 'copilot',
       },
       inline = {
-        adapter = 'gemini',
+        adapter = 'copilot',
       },
     },
     display = {
-      diff = {
-        provider = 'mini_diff',
-      },
       chat = {
         window = {
           width = 0.35,
         },
       },
-    },
-    adapters = {
-      gemini = function()
-        return require('codecompanion.adapters').extend('gemini', {
-          env = {
-            api_key = 'cmd:echo $GOOGLE_AI_API_KEY',
-          },
-        })
-      end,
     },
   },
   keys = {
