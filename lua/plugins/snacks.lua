@@ -7,6 +7,9 @@ return {
     },
     picker = {
       sources = {
+        projects = {
+          dev = { '~/Workspace' },
+        },
         explorer = {
           jump = { close = true },
           layout = { preset = 'default', preview = true },
