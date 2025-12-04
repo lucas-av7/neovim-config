@@ -175,6 +175,7 @@ return {
         ts_ls = {},
         eslint = {},
         codebook = {},
+        tailwindcss = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
