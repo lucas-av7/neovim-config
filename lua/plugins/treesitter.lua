@@ -15,7 +15,6 @@ return {
         'tsx',
         'jsdoc',
         'json',
-        'jsonc',
         'lua',
         'luadoc',
         'markdown',
